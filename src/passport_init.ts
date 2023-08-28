@@ -30,7 +30,6 @@ export default async function passport_init(app: Express) {
   passport.use(
     new JwtStrategy(jwtOptions, async (payload, done) => {
       try {
-        console.log("read user");
         const session = await SessionService.findById(payload.id);
         if (!session) {
           return done(null, false);
@@ -57,7 +56,6 @@ export default async function passport_init(app: Express) {
         callbackURL: config.google.callbackURL,
       },
       async (accessToken, refreshToken, profile, done) => {
-        console.log({ profile: JSON.stringify(profile._json, null, 4) });
         try {
           let user = await UserService.findByGoogleId(profile.id);
 

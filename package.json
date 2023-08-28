@@ -17,6 +17,8 @@
   "author": "jbpcasoy",
   "license": "ISC",
   "dependencies": {
+    "@casl/ability": "^6.5.0",
+    "@casl/prisma": "^1.4.1",
     "@prisma/client": "^5.2.0",
     "@types/express": "^4.17.17",
     "@types/passport": "^1.0.12",
