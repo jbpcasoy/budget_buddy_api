@@ -7,6 +7,8 @@ import passport_init from "./passport_init";
 import routes from "./routes/routes.route";
 
 const app = express();
+app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
 
 passport_init(app);
 
