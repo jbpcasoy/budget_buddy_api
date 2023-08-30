@@ -6,6 +6,7 @@ declare namespace NodeJS {
     GOOGLE_SECRET: string;
     GOOGLE_ID: string;
     SECRET: string;
+    ALLOWED_ORIGINS: string;
     // Add more variables as needed
   }
 }
